@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- google icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Linking style sheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-leftside">
+          <a href="../home.html"><img src="BrandLogo.jpeg" alt="Logo" /></a>
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+        <div class="nav-rightside">
+          <div class="nav-icon">
+            <span class="material-symbols-outlined"> search </span>
+            <span class="material-symbols-outlined"> notifications </span>
+            <span class="material-symbols-outlined"> mail </span>
+            <a href="../home.html">
+              <span class="material-symbols-outlined"> home </span>
+            </a>
+          </div>
+          <div class="admin-profile">
+            <img src="Image/admin.jpg" alt="Logo" />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Side Bar -->
+      <div class="sidebar">
+        <div class="dashboard side">
+          <span class="material-symbols-outlined"> dashboard </span>
+          <h3>Dashboard</h3>
+        </div>
+        <div class="customer side">
+          <span class="material-symbols-outlined"> group </span>
+          <h3>Account</h3>
+        </div>
+        <div class="order side">
+          <span class="material-symbols-outlined"> shopping_cart </span>
+          <h3>Orders</h3>
+        </div>
+        <div class="message side">
+          <span class="material-symbols-outlined"> forum </span>
+          <h3>message</h3>
+        </div>
+        <div class="product side">
+          <span class="material-symbols-outlined"> category </span>
+          <h3>Product</h3>
+        </div>
+        <div class="report side">
+          <span class="material-symbols-outlined"> report </span>
+          <h3>Report</h3>
+        </div>
+        <div class="setting side">
+          <span class="material-symbols-outlined"> settings </span>
+          <h3>Setting</h3>
+        </div>
+        <div class="project side">
+          <span class="material-symbols-outlined"> add_circle </span>
+          <h3>add Project</h3>
+        </div>
+        <div class="logout side">
+          <span class="material-symbols-outlined"> logout </span>
+          <h3>Logout</h3>
+        </div>
+      </div>
+
+      <!-- Content Bar -->
+      <div class="content">
+        <!-- Section 1 : Greeting-->
+        <div class="greeting">
+          <h2>Welcome K<sup>3</sup>,</h2>
+
+          <h3>
+            All systems are running smoothly! You have
+            <span>3 unread alerts!</span>
+          </h3>
+        </div>
+
+        <!-- Section 2 : date -->
+        <div class="date">
+          <select name="date">
+            <option value="">Today</option>
+            <option value="">January</option>
+            <option value="">Feburary</option>
+          </select>
+        </div>
+
+        <!-- Section 3 : Whether-->
+        <div class="wheather">
+          <img src="Image/w2.jpeg" alt="punakha" />
+          <div class="wheather-value">
+            <span class="material-symbols-outlined"> sunny </span>
+            <p>31<sup>oC</sup></p>
+            <h2>
+              <ruby>Bhutan<rt>Mongar</rt></ruby>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Section 4 : Notification -->
+        <div class="notification">
+          <div class="notification-header">
+            <h2>Notification</h2>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+          <div class="profile">
+            <img src="Image/Notification/people1.jpg" alt="client-1" />
+            <div class="profile-info">
+              <h5>Kuenzang Namgyel</h5>
+              <p>Scales dashboard has been created</p>
+              <small> 9:30 pm</small>
+            </div>
+          </div>
+          <div class="profile">
+            <img src="Image/Notification/people2.jpeg" alt="client2" />
+            <div class="profile-info">
+              <h5>Kinley Wangyel</h5>
+              <p>Scales dashboard has been created</p>
+              <small> 10:30 am</small>
+            </div>
+          </div>
+          <div class="profile last-child">
+            <img src="Image/Notification/people3.jpeg" alt="client3" />
+            <div class="profile-info">
+              <h5>Kezang Choden</h5>
+              <p>Scales dashboard has been created</p>
+              <small> 7:30 am</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5 : Status Bar -->
+        <div class="status-bar">
+          <div class="revenue">
+            <span class="material-symbols-outlined" id="status-bar-icon">
+              paid
+            </span>
+            <h2>
+              NU 50,000 <br />
+              <small>revenue</small>
+            </h2>
+          </div>
+          <div class="sales">
+            <span class="material-symbols-outlined" id="status-bar-icon">
+              shopping_cart
+            </span>
+            <h2>
+              12,654
+              <br />
+              <small>shopping</small>
+            </h2>
+          </div>
+          <div class="customers">
+            <span class="material-symbols-outlined" id="status-bar-icon">
+              Group
+            </span>
+            <h2>
+              128,790 <br />
+              <small>Customers</small>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Section 6 : Order Table -->
+        <table class="order-table">
+          <thead class="table-head">
+            <tr>
+              <td colspan="7">Recent Orders</td>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr>
+              <th>#</th>
+              <th>Avatar</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Status</th>
+            </tr>
+
+            <tr>
+              <td>1.</td>
+              <td><img src="Image/Table/client1.jpg" alt="table-avatar" /></td>
+              <td>#11111</td>
+              <td>Kuenzang</td>
+              <td>Samsung J7</td>
+              <td>7</td>
+              <td><span class="td-design-paid">Paid</span></td>
+            </tr>
+
+            <tr>
+              <td>2.</td>
+              <td><img src="Image/Table/client2.jpg" alt="table-avatar" /></td>
+              <td>#22222</td>
+              <td>Sonam</td>
+              <td>Samsung J2</td>
+              <td>3</td>
+              <td><span class="td-design-paid">Paid</span></td>
+            </tr>
+
+            <tr>
+              <td>3.</td>
+              <td><img src="Image/Table/client3.jpeg" alt="table-avatar" /></td>
+              <td>#33333</td>
+              <td>Karma</td>
+              <td>Samsung M33</td>
+              <td>2</td>
+              <td><span class="td-design-paid">Paid</span></td>
+            </tr>
+
+            <tr>
+              <td>4.</td>
+              <td>
+                <img src="Image/Table/client4.jpeg" alt="table-avatar" />
+              </td>
+              <td>#44444</td>
+              <td>Pema</td>
+              <td>Samsung A23</td>
+              <td>1</td>
+              <td><span class="td-design-pending">Pending</span></td>
+            </tr>
+
+            <tr>
+              <td>5.</td>
+              <td><img src="Image/Table/client5.jpeg" alt="table-avatar" /></td>
+              <td>#55555</td>
+              <td>Dawa</td>
+              <td>Samsung A10</td>
+              <td>4</td>
+              <td><span class="td-design-paid">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Section 7 : Order Status -->
+        <div class="order-status">
+          <div class="status-header">
+            <h1>
+              Order Status <br />
+              <!-- <small>42.8k Total sales</small> -->
+            </h1>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+          <!-- <div class="status-body">
+            <div>
+              <h1>8290</h1>
+              <h6>Total sales</h6>
+            </div>
+            <div>svg</div>
+          </div> -->
+          <div class="status-footer">
+            <div class="product1">
+              <span class="material-symbols-outlined"> smartphone </span>
+              <h3>
+                Electronics <br />
+                <small>Mobiles,Earbuds,TV</small>
+              </h3>
+              <h3>82k</h3>
+            </div>
+            <div class="product2">
+              <span class="material-symbols-outlined"> styler </span>
+              <h3>
+                Fashion <br />
+                <small>T-shirt, Jeans, Shoes</small>
+              </h3>
+              <h3>100k</h3>
+            </div>
+
+            <div class="product3">
+              <span class="material-symbols-outlined"> chair </span>
+              <h3>
+                Decor <br />
+                <small>Fine Art, Dining</small>
+              </h3>
+              <h3>50k</h3>
+            </div>
+
+            <div class="product4">
+              <span class="material-symbols-outlined"> sports_rugby </span>
+              <h3>
+                sports<br />
+                <small>Footballs,Cricket Kit</small>
+              </h3>
+              <h3>25k</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 8 : Transactions Status -->
+        <div class="transaction">
+          <div class="transaction-header">
+            <h1>Transaction</h1>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+          <div class="transaction-body">
+            <div class="t-item">
+              <img src="Image/bank/bdbl.jpg" alt="" />
+              <h4><small>e-pay</small><br />BDBL</h4>
+              <h2>Nu 50,000</h2>
+            </div>
+            <div class="t-item">
+              <!-- <span class="material-symbols-outlined"> public </span> -->
+              <img src="Image/bank/bnb.png" alt="" />
+              <h4><small>M-pay</small><br />BNB</h4>
+              <h2>Nu 28,000</h2>
+            </div>
+            <div class="t-item">
+              <!-- <span class="material-symbols-outlined"> public </span> -->
+              <img src="Image/bank/bob.png" alt="" />
+              <h4><small>m-bob</small><br />BOB</h4>
+              <h2>Nu 148,900</h2>
+            </div>
+            <div class="t-item">
+              <!-- <span class="material-symbols-outlined"> public </span> -->
+              <img src="Image/bank/PNB.jpeg" alt="" />
+              <h4><small>Druk pay</small><br />Druk PNB</h4>
+              <h2>Nu 78,980</h2>
+            </div>
+            <div class="t-item">
+              <!-- <span class="material-symbols-outlined"> public </span> -->
+              <img src="Image/bank/tashi.png" alt="" />
+              <h4><small>T-pay</small><br />T-Bank</h4>
+              <h2>Nu 12,349</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js file -->
+    <script src="script.js"></script>
+  </body>
+</html>

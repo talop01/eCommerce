@@ -1,0 +1,464 @@
+/* Font */
+@font-face {
+    font-family: kalam;
+    src: url(Font/Kalam-Regular.ttf);
+}
+
+/* Icon */
+.material-symbols-outlined{
+    cursor: pointer;
+}
+
+/* General */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    background: white;
+    font-family:kalam;
+}
+
+/* Main container */
+.main-container{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 0.5% 15% auto 0.5%;
+}
+
+/* ///////////////////// navigation Bar /////////////////////// */
+.navbar{
+    grid-area: 1/2/2/4;
+    padding: 5px;
+    width: 99.5%;
+    border-bottom: 1px solid black;
+    border-radius: 7px;
+    box-shadow: 5px 10px 10px  rgb(239, 221, 221);
+  background-color: #f8eee5;
+
+}
+
+/* nav-leftside */
+.nav-leftside{
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-left: 10px; 
+}
+
+.nav-leftside>span{
+    padding-left: 10px;
+    font-size: 28px;
+    display: none;
+}
+
+/* Brand Logo */
+.nav-leftside>a>img{
+    height: 50px;
+    width: auto;
+    float: left;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+/* nav-rightside */
+.nav-rightside{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-rightside > *{
+    padding: 2px;
+    padding-right: 20px;
+}
+
+/* Admin Avatar */
+img[src = "Image/admin.jpg"]{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding-top: 5px;
+} 
+
+.mode > h2{
+    width: 70px;
+    border: 2px solid #f8a2a2;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 20px   ;
+
+}
+
+
+/* search Bar */
+.nav-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon  *{
+    padding: 5px; 
+    font-size: 28px;
+}
+
+.nav-icon  a{
+    text-decoration: none;
+}
+
+.nav-icon>a{
+    color: black;
+    margin-top: 5px;
+}
+
+/* //////////////////////// Side Bar ////////////////////////// */
+
+.sidebar{
+    width: 100%;
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 7px;
+}
+
+.sidebar > div{
+    clear: both;
+    display: flex;
+    padding: 10px;
+    box-shadow: 5px 10px 10px  #e3c7c7;
+    border: 1px solid black;
+    background-color: rgb(247, 242, 245);
+    margin-top: 5px;
+    border-radius: 16px;
+    margin-right: 0;
+    margin-left: 0;
+    transition: all 200ms linear;
+}
+
+.sidebar>div:hover{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.side > *{
+    padding: 5px;
+    /* color: #c10000; */
+}
+/* /////////////////////////// content //////////////////////////*/
+.content{
+    clear: both;
+    width: 100%;
+    grid-area: 2/3/3/4;
+    display: grid;
+    grid-template-columns: 3% auto auto auto 3%;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 20px;
+}
+
+/* section1 : Greeting */
+.greeting{
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 10px;
+    box-shadow: 5px 10px 10px  #ebded4;
+    border: 1px solid #352828;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.greeting span{
+    color: #3b2cae;
+}
+
+/* section2 : Date */
+.date{
+    padding-top: 15px;
+    grid-column: 4/5;
+}
+
+.date>select{
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    background-color: #f9dddd;
+    border: 1px solid #9d9494;
+    box-shadow: 5px 10px 10px  #b39f9f;
+    text-align: center;
+    font-size: larger;
+    transition: all 1s ease-in-out;
+}
+
+.date>select:hover{
+    border-radius: 50px;
+}
+
+/* Section3 : wheather */
+.wheather{ 
+    width: 50%;
+    height: 300px;
+    border-radius: 20px;
+    grid-area: 2/2/3/5;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 10px 10px   rgb(241, 217, 217);
+    border: 2px solid #c8bdbd   ;
+}
+
+.wheather img{
+    position: absolute;
+    z-index: 1;
+}
+
+.wheather-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 2;
+    border: 2px solid black;
+    
+}
+
+.wheather-value > h2{
+    padding: 5px;
+}
+
+/* Section 4 : Notification */
+.notification{
+    grid-area: 2/3/3/5;
+    border:2px solid #b6abab;
+    height: 300px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px  #F2E8DF ;
+    margin-left: 30px;
+}
+
+.notification > *{
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.notification-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f9aeae ;
+}
+
+.profile{
+    display: flex;
+}
+.profile > img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50px;
+    border: 3px solid rgb(237,224,224);
+}
+
+.profile h5{
+    color: #332885;
+}
+
+/* section 5 : status bar */
+.status-bar{
+    grid-area: 3/2/4/5;
+    display: flex;
+}
+
+.status-bar > div{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #888888;
+    box-shadow: 5px 10px 10px   rgb(243, 215, 215);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 90px;
+}
+
+.status-bar *{
+    padding: 5px;
+}
+
+#status-bar-icon{
+    font-size: 36px;
+    padding-top: 15px;
+}
+
+.status-bar span{
+    border-right: 2px solid #f9aeae;
+}
+
+/* Section 6 : Order-Table */
+.order-table{
+    grid-area: 4/2/5/5;
+    width: 100%;
+    box-shadow: 5px 10px 10px  #cbc4c4;
+    border: 2px solid #888888;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.order-table *{
+    height: 50px;
+}
+.table-head td{
+    border-bottom: 2px solid ;
+}
+
+.order-table *{
+    border-bottom: 2px solid black;
+}
+
+.table-body th{
+    background-color: #f4d2cf;
+}
+
+img[alt="table-avatar"]{
+    height: 30px;
+    width: 30px;
+    border: 3px solid rgb(237,224,224);
+    border-radius: 50px;
+}
+
+.table-body span{
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    padding: 2px;
+    border: 2px solid black;
+}
+.td-design-paid{
+    background-color:#F2B6A0;    
+}
+
+.td-design-pending{
+    background-color: rgb(200, 234, 231);
+}
+
+/* Section 7 : Order Status */
+.order-status{
+    grid-area: 5/2/6/4;
+    width: 55%;
+    border: 2px solid #888888;
+    box-shadow: 5px 10px 10px  #bcb2b2;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.status-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f9aeae;
+}
+
+.status-footer > *{
+    display: flex;
+    justify-content: space-around;
+}
+
+.status-footer * {
+    padding: 5px;
+}
+
+/* Section 8 : Transaction Status*/
+.transaction{
+    grid-area: 5/3/6/5;
+    border: 2px solid #888888;
+    box-shadow: 5px 10px 10px  #bcb5b5;
+    border-radius: 7px;
+    padding: 20px;
+}
+.transaction-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f9aeae;
+}
+.t-item{
+    display: flex;
+    padding: 5px;
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
+.transaction img{
+    height: 30px;
+    width: 30px;
+    border: 3px solid rgb(237,224,224);
+    border-radius: 50%;
+}
+
+/* Responsive */
+/* For screen sizes lesser than 1200px */
+@media screen and (max-width: 1200px) 
+{
+    .main-container{
+        grid-template-columns: 0.5% 5% auto 0.5%;
+    }
+    .sidebar{
+        align-items: center;
+    }
+    .sidebar h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1021px) 
+{
+    .last-child {
+        display: none;
+    }
+}
+/* For screen sizes lesser than 900px */
+@media screen and (max-width: 900px) 
+{
+    .date{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+
+    .main-container{
+        grid-template-columns: 0.5% auto 0.5%;
+    }
+    .content{
+        grid-area:2/2/3/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .greeting,.wheather,.order-table{
+        width: 95%;
+    }
+    
+    .notification{
+        width: 80%;
+
+    }
+
+    .status-bar>div{
+        margin: 10px;
+        width: 200px;
+    }
+
+    .order-status,.transaction{
+        width: 90%;
+    }
+    
+    .nav-leftside>span{
+        display: block;
+    }
+}
+
